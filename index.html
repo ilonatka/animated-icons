@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Animations</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .icon-container {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-gap: 20px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    /* Анимация пульсации для иконки аккаунта */
+    .account-plus {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Анимация прыжка для корзины */
+    .cart {
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Анимация курсора для планирования */
+    .plan-cursor {
+      animation: swing 1.5s infinite;
+    }
+
+    @keyframes swing {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+    }
+
+    /* Анимация взлёта для ракеты */
+    .racket {
+      animation: fly 2s infinite ease-in-out;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="icon-container">
+    <!-- account.svg -->
+    <img src="icon/account .svg" alt="Account Icon" class="icon account-plus">
+    
+    <!-- cart.svg -->
+    <img src="icon/cart.svg" alt="Cart Icon" class="icon cart">
+    
+    <!-- plan.svg -->
+    <img src="icon/plan.svg" alt="Plan Icon" class="icon plan-cursor">
+    
+    <!-- racket.svg -->
+    <img src="icon/racket.svg" alt="Racket Icon" class="icon racket">
+  </div>
+
+</body>
+</html>
